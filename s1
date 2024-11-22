@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Сайт</title>
+</head>
+<body>
+
+    <div id="page1">
+        <h1>Страница 1</h1>
+        <p>Это первая страница.</p>
+        <button onclick="showPage('page2')">Далее</button>
+    </div>
+    <div id="page2" style="display:none;">
+        <h1>Страница 2</h1>
+        <p>Это вторая страница.</p>
+        <button onclick="showPage('page1')">Назад</button>
+    </div>
+    <script>
+        function showPage(pageId) {document.getElementById('page1').style.display = pageId === 'page1' ? 'block' : 'none';        document.getElementById('page2').style.display = pageId === 'page2' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
